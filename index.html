@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>salva | smol-porto 🐚</title>
+  <!-- Google Fonts: Montserrat -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🫧</text></svg>">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #FFF8F2; /* Creamy beige */
+      color: #403635;    /* Warm brown for text */
+    }
+    header, footer {
+      background: #f2aeb3; /* Muted dusty pink */
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+    nav {
+      background: #FCDDE1; /* Light blush pink */
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: #403635;  /* Warm brown for text */
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    nav a:hover {
+      color: #a067b5; /* soft purple */
+      text-decoration: underline;
+      transition: color 0.3s ease; 
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    a.button {
+      display: inline-block;
+      background: #c7abe0; /* Muted light purple */
+      color: #403635;
+      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
+      text-decoration:none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+      cursor: pointer;
+    }
+    a.button:hover {
+      background: #F7C2CB;
+    }
+   .back-to-top {
+     position: fixed;
+     bottom: 30px;
+     right: 30px;
+     background: #c7abe0; /* light purple */
+     color: #403635;
+     padding: 0.6rem 1rem;
+     border-radius: 30px;
+     text-decoration: none;
+     font-weight: 600;
+     font-size: 0.9rem;
+     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+     transition: background 0.3s ease, opacity 0.3s ease;
+     opacity: 0.8;
+     z-index: 1000;
+     animation: fadeIn 1.2s ease-in;
+     display: none;
+   }
+   .back-to-top:hover {
+     background: #f7c2cb; /* soft pink */
+     opacity: 1;
+   }
+    .fade-in {
+       opacity: 0;
+       animation: fadeIn 1s ease-in forwards;
+    }
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+  @media (max-width: 600px) {
+    h2 {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+    }
+
+    nav {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    a.button {
+      padding: 0.6rem 1rem;
+      font-size: 0.95rem;
+    }
+
+    main {
+      padding: 1rem;
+    }
+    header h1 {
+    font-size: 1.5rem;
+    }
+  }
+
+  </style>
+</head>
+<body>
+<main class="fade-in">
+
+<header>
+  <h1>Salva Amarta Hardy</h1>
+  <p>passionate about people, science, and tech 👀</p>
+</header>
+
+<nav>
+  <a href="#about">about</a>
+  <a href="#cv">CV</a>
+  <a href="#experience">experience</a>
+  <a href="#contact">contact</a>
+</nav>
+
+<section id="about" style="background: #FFFFFF; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 2rem; margin-bottom: 2rem;">
+  <h2>About Me 🫧</h2>
+  <p>Hi, I’m <strong>Salva</strong> — a people-first recruiter with a growing curiosity for tech.</p>
+  <p>I’m passionate about <strong>science, tech, and human connection</strong>. I get excited about quirky facts (🌌 astronomy and 🐾 animal trivia are my jam!), and I’m always curious to learn how things work—especially in the digital world.</p>
+  <p>Currently, I’m growing my career in <strong>recruitment</strong>, where I love connecting the dots between people, ideas, and opportunity 🌱</p>
+  <p>When I’m not working, you’ll find me curled up with a good dystopian novel 📖, catching a TED-Ed video 🎥, or geeking out over something new and random—because that’s just how I roll ✋🏻🥸</p>
+  <p><small><em>Currently exploring tech through self-learning and hands-on projects like this portfolio site—welcome in!</em></small></p>
+</section>
+
+
+  <section id="cv" style="margin-left: 2rem;">
+   <h2>📄 My Resume</h2>
+   <a class="button" href="Salva-Amarta-Hardy-CV.pdf" download target="_blank">Download My CV</a>
+  </section>
+
+  <section id="experience" style="background: #FFFFFF; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 2rem; margin-bottom: 2rem;">
+    <h2>💼 Past Experience</h2>
+    <div style="margin-top: 1.5rem;">
+      <p><strong>Recruitment Intern</strong> – SeaMoney (Sea Group)<br>
+      <small>Mar 2025 – Present</small></p>
+
+      <p><strong>Talent Acquisition Intern</strong> – Amartha Micro Fintech<br>
+      <small>Nov 2024 – Feb 2025</small></p>
+
+      <p><strong>Talent Management Intern</strong> – PT ALTO Network (Djarum Group)<br>
+      <small>Mar – Jun 2022</small></p>
+
+      <p><strong>Local Committee President</strong> – AIESEC in IPB<br>
+      <small>Feb 2022 - Jan 2023 </small></p>
+
+      <p><strong>Local Head of Talent Management</strong> – AIESEC in IPB<br>
+      <small>Feb 2021 - Jan 2022</small></p>
+    </div>
+  </section>
+
+  <section id="contact" style="margin-left: 2rem;">
+    <h2>Contact Me</h2>
+    <p>📧 Email: <a href="mailto:salvaamrta@gmail.com" style="color:#403635">salvaamrta@gmail.com</a></p>
+    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/salva-amarta-hardy/" target="_blank" style="color:#403635">Salva Amarta Hardy</a></p>
+    <p>💻 GitHub: <a href="https://github.com/salvaamrta" target="_blank" style="color:#403635">salvaamrta</a></p>
+  </section>
+<a href="#" class="back-to-top" aria-label="Back to top of page" role="button">↑ Back to Top</a>
+</main>
+
+<footer>
+  <p><small>Let’s connect—and explore how we can collaborate!👋🏻</small></p>
+  <p>© 2025 SALVA🌷</p>
+</footer>
+
+<script>
+  const backToTopButton = document.querySelector('.back-to-top');
+
+  window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopButton.style.display = 'block';
+    backToTopButton.style.opacity = '0.8';
+  } else {
+    backToTopButton.style.opacity = '0';
+    setTimeout(() => {
+      backToTopButton.style.display = 'none';
+    }, 300);
+  }
+});
+</script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <title>salva | smol-porto 🐚</title>
   <!-- Google Fonts: Montserrat -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🫧</text></svg>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     html {
       scroll-behavior: smooth;
@@ -18,19 +18,29 @@
       padding: 0;
       background: #FFF8F2; /* Creamy beige */
       color: #403635;    /* Warm brown for text */
-    }
-    header, footer {
-      background: #f2aeb3; /* Muted dusty pink */
+    header {
+      background: #e27a8f;  /* Darker dusty pink */
       color: #fff;
       text-align: center;
       padding: 1.5rem 0;
+    }
+    footer {
+      background: #f2aeb3; /* Dusty pink */
+      color: #403635;
+      text-align: center;
+      padding: 1.5rem 0;
+    }
+
     }
     nav {
       background: #FCDDE1; /* Light blush pink */
       display: flex;
       justify-content: center;
-      gap: 2rem;
+      gap: 1rem;
       padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav a {
       color: #403635;  /* Warm brown for text */
@@ -41,7 +51,8 @@
     nav a:hover {
       color: #a067b5; /* soft purple */
       text-decoration: underline;
-      transition: color 0.3s ease; 
+      transition: color 0.4s ease, transform 0.3s ease;
+      transform: scale(1.05);
     }
     main {
       padding: 2rem;
@@ -49,7 +60,10 @@
       margin: auto;
     }
     section {
+      scroll-margin-top: 60px;
       margin-bottom: 2rem;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
     }
     a.button {
       display: inline-block;
@@ -65,6 +79,42 @@
     a.button:hover {
       background: #F7C2CB;
     }
+    .social-icons {
+     display: flex;
+     justify-content: center;
+     gap: 15px;
+     padding: 20px;
+     background-color: #f2aeb3; /* Dusty pink */
+   }
+   .icon {
+     background-color: #ffffff;
+     border-radius: 50%;
+     padding: 12px;
+     font-size: 20px;
+     text-decoration: none;
+     transition: transform 0.3s;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   .icon i {
+     color: #403635; /* Dark brown */
+   }
+   .icon:hover {
+     transform: scale(1.1);
+     background-color: #9bbde0; /* soft muted blue */
+     color: #ffffff;
+   }
+   .fade-in {
+     opacity: 0;
+     animation: fadeIn 1s ease-in forwards;
+   }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
    .back-to-top {
      position: fixed;
      bottom: 30px;
@@ -83,20 +133,20 @@
      animation: fadeIn 1.2s ease-in;
      display: none;
    }
-   .back-to-top:hover {
-     background: #f7c2cb; /* soft pink */
-     opacity: 1;
-   }
-    .fade-in {
-       opacity: 0;
-       animation: fadeIn 1s ease-in forwards;
-    }
   @keyframes fadeIn {
     to {
       opacity: 1;
     }
   }
+    .back-to-top:hover {
+  background: #f7c2cb; /* soft pink */
+  opacity: 1;
+}
+  }
   @media (max-width: 600px) {
+    h1 {
+      font size: 1.75rem;
+    }
     h2 {
       font-size: 1.25rem;
     }
@@ -122,6 +172,14 @@
     header h1 {
     font-size: 1.5rem;
     }
+    .social-icons {
+      gap: 10px;
+      padding: 10px;
+    }
+    .icon {
+      padding: 10px;
+      font-size: 18px;
+    }
   }
 
   </style>
@@ -135,10 +193,10 @@
 </header>
 
 <nav>
-  <a href="#about">about</a>
+  <a href="#about">About</a>
   <a href="#cv">CV</a>
-  <a href="#experience">experience</a>
-  <a href="#contact">contact</a>
+  <a href="#experience">Experience</a>
+  <a href="#footer">Contact</a>
 </nav>
 
 <section id="about" style="background: #FFFFFF; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); padding: 2rem; margin-bottom: 2rem;">
@@ -151,7 +209,7 @@
 </section>
 
 
-  <section id="cv" style="margin-left: 2rem;">
+  <section id="cv" style="margin-left: 2rem; scroll-margin-top: 80px;">
    <h2>📄 My Resume</h2>
    <a class="button" href="Salva-Amarta-Hardy-CV.pdf" download target="_blank">Download My CV</a>
   </section>
@@ -176,17 +234,44 @@
     </div>
   </section>
 
-  <section id="contact" style="margin-left: 2rem;">
-    <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:salvaamrta@gmail.com" style="color:#403635">salvaamrta@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/salva-amarta-hardy/" target="_blank" style="color:#403635">Salva Amarta Hardy</a></p>
-    <p>💻 GitHub: <a href="https://github.com/salvaamrta" target="_blank" style="color:#403635">salvaamrta</a></p>
-  </section>
+  <section id="skills" style="margin-left: 2rem;">
+  <h2>Skills & Interests ✨</h2>
+
+  <div>
+    <p><strong>💼 Human Resources:</strong></p>
+    <p><small>Talent Acquisition & Recruitment, Talent Development & Engagement, Talent Management, Organizational Development</small></p>
+    <ul>
+      <li><small>Talentics, LinkedIn</small></li>
+      <li><small>Applicant Tracking System: Workable, Work At Sea</small></li>
+      <li><small>HRIS: Talenta, Sunfish, People Sea</small></li>
+    </ul>
+    <p><strong>💻 Web Development:</strong></p>
+    <p><small>Basic HTML, CSS, JavaScript & Web Publishing</small></p>
+  </div>
+  <div>
+    <h3>🗣️ Languages</h3>
+    <ul>
+      <li><small>🇮🇩 <strong>Bahasa Indonesia:</strong> Native</small></li>
+      <li><small>👋🏻 Bisindo Sign Language:<em> Learning for fun!</em></small></li>
+      <li><small>🌐 <strong>English:</strong> Advanced (C1)</small></li>
+      <li><small>🇩🇪 <strong>Deutsch:</strong> Basic (A2)</small></li>
+      <li><small>🇰🇷 <strong>한국어:</strong><em> Learning for fun!</em></small></li>
+      <li><small>🇮🇹 <strong>Italia:</strong><em> Learning for fun!</em></small></li>
+    </ul>
+  </div>
+</section>
+
 <a href="#" class="back-to-top" aria-label="Back to top of page" role="button">↑ Back to Top</a>
 </main>
 
-<footer>
+<footer id="footer">
   <p><small>Let’s connect—and explore how we can collaborate!👋🏻</small></p>
+  <div class="social-icons">
+   <a href="mailto:salvaamrta@gmail.com" class="icon"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/salva-amarta-hardy" class="icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://github.com/salvaamrta" class="icon" target="_blank"><i class="fab fa-github"></i></a>
+  <a href="https://www.instagram.com/salvaamrta" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+</div>
   <p>© 2025 SALVA🌷</p>
 </footer>
 
@@ -196,13 +281,34 @@
   window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
     backToTopButton.style.display = 'block';
-    backToTopButton.style.opacity = '0.8';
+    backToTopButton.style.opacity = '1';
   } else {
     backToTopButton.style.opacity = '0';
     setTimeout(() => {
       backToTopButton.style.display = 'none';
     }, 300);
   }
+});
+  document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll('section');
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  sections.forEach(section => {
+    observer.observe(section);
+  });
 });
 </script>
 
